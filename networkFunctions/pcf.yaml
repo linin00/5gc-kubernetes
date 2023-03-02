@@ -14,10 +14,10 @@ spec:
     spec:
       containers:      
       - name: network-function
-        image: free5gc-compose_free5gc-pcf
+        image: free5gc/pcf:v3.2.1
         imagePullPolicy: IfNotPresent
         command: ["./pcf"]
-        args: ["-pcfcfg", "../config/pcfcfg.yaml"]
+        args: ["-c", "./config/pcfcfg.yaml"]
         volumeMounts:
         - name: pcfcfg
           mountPath: /free5gc/config/pcfcfg.yaml

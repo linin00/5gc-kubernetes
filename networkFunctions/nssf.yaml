@@ -14,10 +14,10 @@ spec:
     spec:
       containers:      
       - name: network-function
-        image: free5gc-compose_free5gc-nssf
+        image: free5gc/nssf:v3.2.1
         imagePullPolicy: IfNotPresent
         command: ["./nssf"]
-        args: ["-nssfcfg", "../config/nssfcfg.yaml"]
+        args: ["-c", "./config/nssfcfg.yaml"]
         volumeMounts:
         - name: nssfcfg
           mountPath: /free5gc/config/nssfcfg.yaml

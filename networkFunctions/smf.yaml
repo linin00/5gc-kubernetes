@@ -14,10 +14,10 @@ spec:
     spec:
       containers:      
       - name: network-function
-        image: free5gc-compose_free5gc-smf
+        image: free5gc/smf:v3.2.1
         imagePullPolicy: IfNotPresent
         command: ["./smf"]
-        args: ["-smfcfg","../config/smfcfg.yaml","-uerouting","../config/uerouting.yaml"]
+        args: ["-c","./config/smfcfg.yaml","-u","./config/uerouting.yaml"]
         volumeMounts:
         - name: smfcfg
           mountPath: /free5gc/config/smfcfg.yaml

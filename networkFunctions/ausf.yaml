@@ -14,10 +14,10 @@ spec:
     spec:
       containers:      
       - name: network-function
-        image: free5gc-compose_free5gc-ausf
+        image: free5gc/ausf:v3.2.1
         imagePullPolicy: IfNotPresent
         command: ["./ausf"]
-        args: ["-ausfcfg", "../config/ausfcfg.yaml"]
+        args: ["-c", "./config/ausfcfg.yaml"]
         volumeMounts:
         - name: ausfcfg
           mountPath: /free5gc/config/ausfcfg.yaml

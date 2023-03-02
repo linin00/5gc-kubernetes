@@ -14,10 +14,10 @@ spec:
     spec:
       containers:      
       - name: network-function
-        image: free5gc-compose_free5gc-upf-1
+        image: free5gc/upf:v3.2.1
         imagePullPolicy: IfNotPresent
-        command: ["./free5gc-upfd"]
-        args: ["-f", "../config/upfcfg1.yaml"]
+        command: ["./upf"]
+        args: ["-c", "./config/upfcfg1.yaml"]
         volumeMounts:
           - name: upfcfg1
             mountPath: /free5gc/config/upfcfg1.yaml 

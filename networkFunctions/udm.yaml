@@ -14,10 +14,10 @@ spec:
     spec:
       containers:      
       - name: network-function
-        image: free5gc-compose_free5gc-udm
+        image: free5gc/udm:v3.2.1
         imagePullPolicy: IfNotPresent
         command: ["./udm"]
-        args: ["-udmcfg", "../config/udmcfg.yaml"]
+        args: ["-c", "./config/udmcfg.yaml"]
         volumeMounts:
         - name: udmcfg
           mountPath: /free5gc/config/udmcfg.yaml

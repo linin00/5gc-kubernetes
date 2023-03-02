@@ -14,10 +14,10 @@ spec:
     spec:
       containers:      
       - name: network-function
-        image: free5gc-compose_free5gc-amf
+        image: free5gc/amf:v3.2.1
         imagePullPolicy: IfNotPresent
         command: ["./amf"]
-        args: ["-amfcfg", "../config/amfcfg.yaml"]
+        args: ["-c", "./config/amfcfg.yaml"]
         volumeMounts:
         - name: amfcfg
           mountPath: /free5gc/config/amfcfg.yaml

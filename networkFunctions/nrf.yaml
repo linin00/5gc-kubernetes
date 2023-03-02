@@ -14,10 +14,10 @@ spec:
     spec:
       containers:      
       - name: network-function
-        image: free5gc-compose_free5gc-nrf
+        image: free5gc/nrf:v3.2.1
         imagePullPolicy: IfNotPresent
         command: ["./nrf"]
-        args: ["-nrfcfg", "../config/nrfcfg.yaml"]
+        args: ["-c", "./config/nrfcfg.yaml"]
         volumeMounts:
         - name: nrfcfg
           mountPath: /free5gc/config/nrfcfg.yaml

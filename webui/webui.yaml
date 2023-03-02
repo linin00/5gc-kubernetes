@@ -14,9 +14,9 @@ spec:
     spec:
       containers:      
       - name: frontend
-        image: free5gc-compose_free5gc-webui
+        image: free5gc/webui:v3.2.1
         imagePullPolicy: IfNotPresent
-        command: ["./webui"]
+        command: ["./webui", "-c", "./config/webuicfg.yaml"]
         volumeMounts:
         - name: webuicfg
           mountPath: /free5gc/config/webuicfg.yaml

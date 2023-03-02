@@ -12,12 +12,12 @@ spec:
       labels:
         app: upfb
     spec:
-      containers:      
+      containers:     
       - name: network-function
-        image: free5gc-compose_free5gc-upf-b
+        image: free5gc/upf:v3.2.1
         imagePullPolicy: IfNotPresent
-        command: ["./free5gc-upfd"]
-        args: ["-f", "../config/upfcfgb.yaml"]
+        command: ["./upf"]
+        args: ["-c", "./config/upfcfg3.yaml"]
         volumeMounts:
           - name: upfcfgb
             mountPath: /free5gc/config/upfcfgb.yaml
