@@ -25,7 +25,7 @@ spec:
         - name: GIN_MODE
           value: release
       nodeSelector:
-        kubernetes.io/hostname: k8s-master
+        kubernetes.io/hostname: vm-0-14-ubuntu
       volumes:
       - name: grpc-sock
         hostPath:

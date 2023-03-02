@@ -29,7 +29,7 @@ spec:
         - name: GIN_MODE
           value: release
       nodeSelector:
-        kubernetes.io/hostname: k8s-master
+        kubernetes.io/hostname: vm-0-14-ubuntu
       initContainers:
       - name: init-network-client
         image: sdnvortex/network-controller:v0.4.9

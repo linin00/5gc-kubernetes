@@ -33,7 +33,7 @@ spec:
               name: dbdata
       restartPolicy: Always
       nodeSelector:
-        kubernetes.io/hostname: k8s-master
+        kubernetes.io/hostname: vm-0-14-ubuntu
       initContainers:
       - name: init-network-client
         image: sdnvortex/network-controller:v0.4.9
